@@ -19,7 +19,7 @@ pipelineJob('Your App Pipeline') {
     cpsScm {
       scm {
         git {
-          remote { url(sshRepo) }
+          remote { url(repo) }
           branches('master')
           scriptPath('misc/Jenkinsfile.v2')
           extensions { }  // required as otherwise it may try to tag the repo, which you may not want
