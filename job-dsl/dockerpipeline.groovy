@@ -8,7 +8,7 @@ pipelineJob('Your App Pipeline') {
 
   properties{
 
-    pipelineTriggers([cron('H/3 * * * *')])
+    pipelineTriggers([pollSCM('H/3 * * * *')])
     githubProjectUrl (repo)
     rebuild {
       autoRebuild(false)
