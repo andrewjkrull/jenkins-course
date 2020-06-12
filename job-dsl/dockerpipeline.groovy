@@ -8,6 +8,9 @@ pipelineJob('Your App Pipeline') {
 
   properties{
 
+    pipelineTriggers {
+      pollSCM('H/2 * * * *')
+    }
     githubProjectUrl (repo)
     rebuild {
       autoRebuild(false)
